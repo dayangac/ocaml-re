@@ -1,6 +1,10 @@
 Unreleased
 ----------
 
+* Handle final newlines that land on a stream chunk boundary: a trailing
+  newline is deferred until the next chunk or finalization, so [Re.Stream]
+  and [Re.Stream.Group] still match `leol` and keep grouped captures (#695).
+
 * Fix [Re.Stream.finalize] not treating a newline at the end of a finalized
   window as the final newline (#694).
 
