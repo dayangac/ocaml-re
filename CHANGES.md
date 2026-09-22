@@ -1,6 +1,9 @@
 Unreleased
 ----------
 
+* Fix [Re.Glob] with `expand_braces:true` treating `{foo}` as `foo`; braces
+  without alternatives are now literal (#686).
+
 * Fix [Re.Stream.finalize] not treating a newline at the end of a finalized
   window as the final newline (#694).
 
