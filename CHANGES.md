@@ -1,6 +1,9 @@
 Unreleased
 ----------
 
+* Fix [Re.witness] raising [Assert_failure] for languages containing empty
+  alternatives; empty languages now raise [Invalid_argument] (#685).
+
 * Fix [Re.Stream.finalize] not treating a newline at the end of a finalized
   window as the final newline (#694).
 
