@@ -13,6 +13,8 @@ include Pmark
 module Set = struct
   include Set.Make (Pmark)
 
+  let equal x y = Import.Phys_equal.equal x y || equal x y
+  let compare x y = if Import.Phys_equal.equal x y then 0 else compare x y
   let to_list = elements
 end
 
